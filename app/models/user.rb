@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
 
 	has_many :articles
 	has_many :comments
+	has_many :votes
 
 	validates :password, length: { minimum: 5 }
 	validates :password, confirmation: true
