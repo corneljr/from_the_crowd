@@ -1,0 +1,10 @@
+<footer class="pull-left">
+	<div class='container'>
+	<p class='text-center'>
+		<% unless current_user %>
+			w<%= link_to 'sign in', new_user_session_path%>
+		<% end %>
+		<%= link_to 'about us', about_path%>
+		<%= link_to 'articles', articles_path%></p>
+	</div>
+</footer>

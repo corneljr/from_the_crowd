@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  root 'static_pages#home'
+
+  get '/about' => 'static_pages#about'
 
   resources :user_sessions
   resources :users
+  resources :articles
 
   get 'login' => 'user_sessions#new', :as => :login
   get 'logout' => 'user_session#destroy', :as => :logout
