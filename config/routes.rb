@@ -5,8 +5,9 @@ Rails.application.routes.draw do
 
   resources :user_sessions
   resources :users
-  resources :articles
-  resources :comments, only: [:create, :destroy]
+  resources :articles do 
+    resources :comments, only: [:create, :destroy]
+  end
 
   get 'login' => 'user_sessions#new', :as => :login
   get 'logout' => 'user_session#destroy', :as => :logout

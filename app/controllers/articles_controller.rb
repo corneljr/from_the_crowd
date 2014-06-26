@@ -18,6 +18,7 @@ class ArticlesController < ApplicationController
 
 	def show
 		@article = Article.find(params[:id])
+		@comment = @article.comments.build
 	end
 
 	def update
@@ -40,6 +41,6 @@ class ArticlesController < ApplicationController
 	private
 
 	def article_params
-		params.require(:article).permit(:title, :body)
+		params.require(:article).permit(:title, :body, :user_id)
 	end
 end
