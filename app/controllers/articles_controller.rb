@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
 		else
 			render "new"
 		end
-		
+
 	end
 
 	def show
@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
 		@article = Article.find(params[:id])
 	end
 
-	def delete
+	def destroy
 		@article = Article.find(params[:id])
 		@article.destroy
 		redirect_to articles_path
