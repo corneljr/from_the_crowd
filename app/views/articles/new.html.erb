@@ -1,8 +1,9 @@
+<%= link_to "Back", articles_path  %>
 <h1>Create</h1>
 
 <%= form_for(@article) do |f| %>
 
-<div>
+
 	<%= f.label :title  %>
 	<%= f.text_field :title  %>
 
@@ -10,6 +11,6 @@
 	<%= f.text_field :body  %>
 
 	<%= f.submit %>
-</div>
+
 
 <% end %>

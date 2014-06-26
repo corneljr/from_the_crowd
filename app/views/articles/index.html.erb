@@ -3,6 +3,8 @@
 <h1>Articles</h1>
 
 <% @articles.each do |art|  %>
-	<%=  art.title %>
-	<%=  art.body %>
+	<%= link_to article_path(art.id) do %>
+		<%=  art.title %>
+		<%=  art.body %>
+	<% end %>
 <% end %>
