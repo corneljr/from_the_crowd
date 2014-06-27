@@ -19,3 +19,11 @@
 body {
   font-family: 'Raleway', Helvetica;
 }
+
+
+.menu_button {
+	background-color: #2ecc71;
+	border: none;
+	padding: 10px;
+	margin: -10px;
+}

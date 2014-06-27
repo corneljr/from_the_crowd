@@ -7,5 +7,22 @@
 	display: block;
 	font-size: 2em;
 	font-family: 'Raleway', Helvetica;
-	margin: 20px;
+}
+
+
+#bio_stats {
+	width: 100px;
+	height: 100px;
+	border-radius: 100px;
+	background-color: #2ecc71;
+	opacity: 0.9;
+}
+
+#bio_stats:hover {
+	opacity: 1;
+}
+
+.user_stats, .user_bio {
+	background-color: #2ecc71;
+	height: 300px;
 }
