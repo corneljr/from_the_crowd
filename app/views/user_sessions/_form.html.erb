@@ -1,17 +1,31 @@
-<%= form_tag user_sessions_path, method: :post do %>
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div clas="center_div">
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <div class="reg_label"><%= f.label :email %></div>
+    <div class="reg_input"><%= f.text_field :email %></div>
   </div>
   <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
+    <div class="reg_label"><%= f.label :password %></div>
+    <div class="reg_input"><%= f.password_field :password %></div>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation %>
+    <div class="reg_label"><%= f.label :password_confirmation %></div>
+    <div class="reg_input"><%= f.password_field :password_confirmation %></div>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <div class="uk-text-center"><%= f.submit "sign in", class: "submit_btn" %></div>
   </div>
 <% end %>
+
+</div>
