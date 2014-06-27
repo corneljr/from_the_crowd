@@ -1,5 +1,33 @@
-<p id="notice"><%= notice %></p>
-<p>User profile</p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+
+<div class="uk-progress  uk-progress-striped">
+   <div class="uk-progress-bar" style="width: 40%;">40%</div>
+</div>
+<div class="uk-container">
+<%= link_to 'Back', users_path %> |
+<%= link_to 'Edit', edit_user_path(@user) %> 
+	<div class="uk-grid">
+		<div class="uk-width-3-10">
+			<h1 class="reg_header uk-text-left"><%= @user.name  %></h1>
+
+			<p><%= image_tag("writer.jpeg", :alt => "sports writer") %><p>
+			<div class="action">
+				<button>bio</button>
+				<br>
+				<button>stats</button>
+			</div>
+		</div>
+		<div class="uk-width-7-10">
+
+				<div class="user_bio">
+					<h1 class="reg_header">bio</p></h1>
+				</div>
+				<div class="user_stats">
+					<h1 class="reg_header">stats</h1>
+				</div>
+		</div>
+	</div>
+	 
+</div>
+
+<h1 class="reg_header">Recent Articles</h1>

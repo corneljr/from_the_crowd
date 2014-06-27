@@ -1,0 +1,11 @@
+.action {
+	padding-left: 50px;
+}
+.action button {
+	background-color: white;
+	border: none;
+	display: block;
+	font-size: 2em;
+	font-family: 'Raleway', Helvetica;
+	margin: 20px;
+}
