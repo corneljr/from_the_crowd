@@ -1,8 +1,38 @@
-<h1 class="reg_header">Editing user</h1>
 
-<div class="center_div">
-<%= render 'form' %>
+<%= link_to 'Back', users_path %> |
+<%= link_to 'Edit', edit_user_path(@user) %> 
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
-</div>
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="row">
+  <div class="small-11 small-centered columns">
+  	<h1 class="profile_header"><%= image_tag("writer.jpeg", :alt => "writer,") %></h1>
+  	<h1 class="profile_header"><%= f.text_field :name, class: "header_input" %></h1>
+  	<%= f.text_area :description, class: "user_description" %>
+
+  	 <div class="field">
+      <div class="reg_label"><%= f.label :password %></div>
+      <div class="reg_input"><%= f.password_field :password %></div>
+    </div>
+    <div class="field">
+      <div class="reg_label"><%= f.label :password_confirmation %></div>
+      <div class="reg_input"><%= f.password_field :password_confirmation %></div>
+    </div>
+  	<div class="actions">
+      <div class="center"><%= f.submit "Update", class: "submit_btn" %></div>
+    </div>
+	</div>
+ </div>
+</div>	
+
+<% end %>

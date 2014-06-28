@@ -2,15 +2,35 @@
 
 <%= link_to 'Back', users_path %> |
 <%= link_to 'Edit', edit_user_path(@user) %> 
-	
-			<h1><%= @user.name  %></h1>
-			
-	</div>
-	 
-</div>
 
-<h1>Recent Articles</h1>
+<div class="row">
+  <div class="large-11 large-centered columns">
+  	<h1 class="profile_header"><%= image_tag("writer.jpeg", :alt => "writer,") %></h1>
+  	<h1 class="profile_header"><%= @user.name  %></h1>
+  	<div class="progress">
+		  <span class="meter"  style="width: 40%"></span>
+		</div>
+  	<div class="user_description">
+  		<%= @user.description  %>
+  	</div>
+		<h1 class="profile_header">Stats</h1>	
+		<h3>Quality</h3>	
+		<div class="progress large-6">
+		  <span class="meter" style="width: 60%"></span>
+		</div>
+		<h3>Followers</h3>	
+		<div class="progress large-6">
+		  <span class="meter" style="width: 70%"></span>
+		</div>
+		<h3>Recommended</h3>	
+		<div class="progress large-6">
+		  <span class="meter" style="width: 50%"></span>
+		</div>	
+		<h1 class="profile_header">Contributions</h1>
 
-<%=  @articles.each do |article| %>
-	<h1><%= article.title %></h1>
-<% end %>
+		<%=  @articles.each do |article| %>
+			<h1><%= article.title %></h1>
+		<% end %>
+
+  </div>
+</div>	

@@ -33,6 +33,7 @@
       margin-bottom: 5px;
       color: #2ecc71;
       border: 1px solid #2ecc71;
+      margin: auto;
     }
     .submit_btn:hover {
       background-color: #2ecc71;
