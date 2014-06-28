@@ -10,4 +10,9 @@ class User < ActiveRecord::Base
 	validates :password_confirmation, presence: true
 
 	validates :email, uniqueness: true
+
+	def user_signed_in?
+		
+	end
+
 end

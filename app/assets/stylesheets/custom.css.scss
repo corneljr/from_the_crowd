@@ -1,0 +1,107 @@
+.body {
+	height: 100%;
+	margin-bottom: 0px;
+}
+
+.center {
+	text-align: center;
+}
+
+//article index
+
+.create-link {
+	color: white
+}
+
+.create-link:visited {
+	color: white
+}
+
+.articles-title {
+	color: white;
+}
+
+.article-title-container {
+	margin-top: 200px;
+	margin-bottom: 200px;
+}
+
+.article-list-container {
+	width: 100%;
+	background-color: white;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	height: 100%;
+}
+
+//new article
+
+.new-article {
+	border: 0 !important;
+	box-shadow: inset 0px 0px 0px !important;
+}
+
+.new-article:focus {
+	background-color: white;
+}
+
+.new-article-container {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.article-body {
+	resize: none;
+	font-size: 1rem;
+}
+
+.article-title {
+	font-size: 4rem;
+}
+
+.article-save {
+	position: fixed;
+	height: 20px;
+	bottom: 0px;
+	left: 0px;
+	right: 80px;
+	margin-bottom: 20px;
+}
+
+.article-post {
+	position: fixed;
+	height: 20px;
+	bottom: 0px;
+	left: 0px;
+	right: 10px;
+	margin-bottom: 20px;
+}
+
+.cover-image {
+	-webkit-webkit-background-size: cover;
+	-moz-webkit-background-size: cover;
+	-ms-webkit-background-size: cover;
+	-o-webkit-background-size: cover;
+	background-size: cover;
+
+	background: linear-gradient(
+								rgba(0, 0, 0, 0.5), 
+								rgba(0, 0, 0, 0.5)
+								), 
+							url('fenway.jpg') no-repeat center center fixed;
+
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	opacity: 1;
+}
+
+.blurred-img {
+		opacity: 0;
+		background: url('blurred.jpg') no-repeat center center fixed;
+
+}
