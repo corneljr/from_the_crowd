@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20140625231920) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "articles", force: true do |t|
     t.string   "title"
     t.text     "body"
@@ -51,8 +48,8 @@ ActiveRecord::Schema.define(version: 20140625231920) do
     t.string   "name"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["remember_me_token"], name: "index_users_on_remember_me_token", using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["remember_me_token"], name: "index_users_on_remember_me_token"
 
   create_table "votes", force: true do |t|
     t.integer  "user_id"
