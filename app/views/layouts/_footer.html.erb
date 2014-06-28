@@ -2,9 +2,9 @@
 	<div class='container'>
 	<p class='text-center'>
 		<% unless current_user %>
-			w<%= link_to 'sign in', new_user_session_path%>
+			<%= link_to 'sign in', new_user_session_path, class: 'footer-link'%>
 		<% end %>
-		<%= link_to 'about us', about_path%>
-		<%= link_to 'articles', articles_path%></p>
+		<%= link_to 'about us', about_path, class: 'footer-link'%>
+		<%= link_to 'articles', articles_path, class: 'footer-link'%></p>
 	</div>
 </footer>
