@@ -1,3 +1,7 @@
+body {
+	margin-bottom: 0px !important;
+}
+
 .body {
 	height: 100%;
 	margin-bottom: 0px;
@@ -25,7 +29,28 @@ a.sign-up:visited {
 	color: white;
 }
 
+.footer {
+	position: fixed;
+	height: 20px;
+	bottom: 0px;
+	left: 0px;
+	right: 10px;
+	margin-bottom: 20px;
+}
+
+//new session
+
+.form-container {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 //article index
+
+.article-list {
+	list-style: none;
+}
 
 .create-link {
 	color: white
@@ -44,13 +69,18 @@ a.sign-up:visited {
 	margin-bottom: 200px;
 }
 
-.article-list-container {
+.background-container {
 	width: 100%;
 	background-color: white;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
-	height: 100%;
+}
+
+.article-list-container {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 //new article

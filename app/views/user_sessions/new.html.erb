@@ -1,6 +1,20 @@
-<h1 class="reg_header">Login</h1>
-<div class="center_div">
-	<%= render 'form' %>
-
-	<%= link_to 'Back', user_sessions_path %>
+<div class='form-container'>
+	<h1 class="reg_header">Login</h1>
+		<%= form_tag '/user_sessions' do %>
+			<div clas="center_div">
+			  <div class="field">
+			    <div class="reg_label"><%= label_tag :email %></div>
+			    <div class="reg_input"><%= text_field_tag :email %></div>
+			  </div>
+			  <div class="field">
+			    <div class="reg_label"><%= label_tag :password %></div>
+			    <div class="reg_input"><%= password_field_tag :password %></div>
+			  </div>
+			  <div class="actions">
+			    <div class="uk-text-center"><%= submit_tag "sign in", class: "submit_btn" %></div>
+			  </div>
+			<% end %>
+			</div>
+			<%= link_to 'sign up', new_user_path %>
+	</div>
 </div>

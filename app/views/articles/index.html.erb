@@ -7,9 +7,15 @@
 	<%= link_to "Create Article", new_article_path, class: 'button tiny create-link' %>
 </div>
 
-<div class='article-list-container'>
+<div class='background-container'>
+	<div class='article-list-container'>
 	<h3>The best articles of the month</h3>
-	<% @articles.each do |article|  %>
-			<%= article.title %>
-	<% end %>
+	<ul class='article-list'>
+		<% @articles.each do |article|  %>
+			<li>
+				<h4><%= link_to article.title, article_path(article) %></h4>
+				<p>by <%= article.user.name %></p>
+			</li>
+		<% end %>
+	</ul>
 </div>
