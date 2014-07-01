@@ -1,8 +1,9 @@
 
 development:
-  adapter: postgresql
-  database: app-dev
-  host: localhost
+  adapter: sqlite3
+  database: db/developement.sqlite3
+  pool: 5
+  timeout: 5000
 
 test:
   adapter: sqlite3
