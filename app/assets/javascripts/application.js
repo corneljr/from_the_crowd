@@ -17,3 +17,14 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+	$('.chart').easyPieChart({
+				size:140,
+				animate: 2000,
+				lineCap:'butt',
+				scaleColor: false,
+				barColor: '#2C3E50',
+				trackColor: 'transparent',
+				lineWidth: 10
+		});
+	
