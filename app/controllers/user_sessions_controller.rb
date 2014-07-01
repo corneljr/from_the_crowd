@@ -2,6 +2,7 @@ class UserSessionsController < ApplicationController
   skip_before_filter :require_login, only: [:destroy, :new, :create]
 
   def new
+    binding.pry
   end
 
   def create
