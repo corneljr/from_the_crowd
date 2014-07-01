@@ -53,17 +53,6 @@ a.sign-up {
 
 //article index
 
-.show-article-container {
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.comment-container {
-	width: 70%;
-	margin-left: auto;
-	margin-right: auto;
-}
 
 .specific-article {
 	border-top: 1px solid grey;
@@ -190,6 +179,24 @@ a.sign-up {
 		opacity: 0;
 		background: url('blurred.jpg') no-repeat center center fixed;
 
+}
+
+//article show
+
+.show-article-container {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.body {
+	font-size: 1rem;
+}
+
+.comment-container {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 //top writers

@@ -1,11 +1,12 @@
 <div class='show-article-container'>
-	<h1><%= @article.title  %></h1>
-	<p><%= @article.body  %><p>
+	<h1 class='title center'><%= @article.title %></h1>
+	<p class='body'><%= @article.body  %><p>
 </div>
 
 <div class='comment-container'>
+	<h3>Comments</h3>
 	<%= form_for [@article, @comment] do |f| %>
-		<p><%= f.text_field :body  %><%= f.submit %></p>
+		<p><%= f.text_field :body  %><%= f.submit 'Post', class: 'button small' %></p>
 	<% end %>
 
 	<% @article.comments.each do |comment| %>
