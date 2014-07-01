@@ -13,7 +13,7 @@
 		<% @articles.each do |article|  %>
 			<li class='specific-article'>
 				<h4><%= link_to article.title, article_path(article), class: 'article-link' %></h4>
-				<p>by <%= article.user.name %></p>
+				<p class='article-author'>by <%= article.user.name %></p>
 			</li>
 		<% end %>
 	</ul>

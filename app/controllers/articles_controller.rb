@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
 	skip_before_filter :require_login, only: [:index, :show]
 
 	def index
-			@articles = Article.all
+		@articles = Article.all
 	end
 	def new
 		@article = Article.new
@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
 
 	def show
 		@article = Article.find(params[:id])
-		@comment = @article.comments.build
+		@comment = Comment.new
 	end
 
 	def update
