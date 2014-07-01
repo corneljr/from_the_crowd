@@ -1,13 +1,14 @@
-<p><%= link_to "Back", articles_path  %></p>
-<p><%= link_to "Delete", article_path(@article.id), :method => "delete" %> | <%= link_to "Edit", edit_article_path(@article.id) %></p>
-<h1><%= @article.title  %></h1>
-<p><%= @article.body  %><p>
+<div class='show-article-container'>
+	<h1><%= @article.title  %></h1>
+	<p><%= @article.body  %><p>
+</div>
 
+<div class='comment-container'>
+	<%= form_for [@article, @comment] do |f| %>
+		<p><%= f.text_field :body  %><%= f.submit %></p>
+	<% end %>
 
-<%= form_for [@article, @comment] do |f| %>
-	<p><%= f.text_field :body  %><%= f.submit %></p>
-<% end %>
-
-<% @article.comments.each do |comment| %>
-	<p><%= comment.body  %></p>
-<% end %>
+	<% @article.comments.each do |comment| %>
+		<p><strong><%#= comment.user.name %></strong>: <%= comment.body %></p>
+	<% end %>
+</div>
