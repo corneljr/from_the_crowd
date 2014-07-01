@@ -1,11 +1,19 @@
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700);
+
 body {
+	font-family: 'Lora', serif !important;
 	margin-bottom: 0px !important;
 	height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Lora', serif !important;
 }
 
 .body {
 	height: 100%;
 	margin-bottom: 0px;
+	line-height: 2rem;
 }
 
 .center {
@@ -190,10 +198,15 @@ a.sign-up {
 }
 
 .body {
-	font-size: 1rem;
+	font-size: 1.2rem;
+}
+
+.comment-header {
+
 }
 
 .comments-container {
+	margin-top: 100px;
 	width: 40%;
 	margin-left: auto;
 	margin-right: auto;
@@ -201,7 +214,7 @@ a.sign-up {
 
 .comment-container {
 	font-size: 1rem;
-	height: 200px;
+	height: auto;
 	width: 300px;
 	border: 1px solid #ecf0f1;
 	border-width: 5px 5px 5px 5px;
@@ -221,8 +234,12 @@ a.sign-up {
 	margin-top: 20px;
 }
 
+.username {
+	color: black;
+}
+
 .username:visited {
-	color:inherit;
+	color:black;
 }
 
 //top writers

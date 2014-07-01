@@ -1,11 +1,11 @@
 <div class='show-article-container'>
+	<span class="chart" data-percent="75"><span class="percent">75%</span></span>
 	<h1 class='title center'><%= @article.title %></h1>
-	<span class="chart" data-percent="75"><span class="percent">75</span></span>
 	<p class='body'><%= @article.body  %><p>
 </div>
 
-<div class='comments-container'>
-	<h3>Comments</h3>
+<div class='comments-container center'>
+	<h3 class='comments-header'>Comments</h3>
 	<%= form_for [@article, @comment] do |f| %>
 		<p><%= f.text_field :body  %><%= f.submit 'Post', class: 'button small' %></p>
 	<% end %>
@@ -14,7 +14,7 @@
 		<div class='row'>
 			<div class='large-4 columns'>
 				<div class='commenter center'>
-					<%= image_tag "writer.jpeg", class: 'comment-pic' %>
+					<%= image_tag "bean.png", class: 'comment-pic' %>
 					<p><strong><%= link_to comment.user.name, comment.user, class: 'username'%></strong></p>
 				</div>
 			</div>
