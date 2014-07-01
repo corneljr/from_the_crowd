@@ -10,7 +10,7 @@ class UserSessionsController < ApplicationController
       session[:user_id] = @user.id
   		redirect_to articles_path, notice: 'Login successful'
   	else
-  		flash.now[:alert] = 'Login failed'
+  		flash.now[:alert] = 'Invalid email or password'
   		render action: 'new'
   	end
   end

@@ -1,5 +1,5 @@
 <% if flash[:alert] %>
-  <div><% flash[:alert] %></div>
+  <div data-alert class='alert-box alert'><%= flash[:alert] %></div>
 <% elsif flash[:notice] %>
-   <div><% flash[:notice] %></div>
+   <div data-alert class='alert-box'><%= flash[:notice] %></div>
 <% end %>
