@@ -1,5 +1,6 @@
 body {
 	margin-bottom: 0px !important;
+	height: 100%;
 }
 
 .body {
@@ -36,6 +37,10 @@ a.sign-up:visited {
 	left: 0px;
 	right: 10px;
 	margin-bottom: 20px;
+}
+
+a.sign-up {
+	border-radius: 5px;
 }
 
 //new session
