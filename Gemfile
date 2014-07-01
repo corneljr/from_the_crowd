@@ -6,9 +6,15 @@ gem 'rails', '4.1.1'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Use postgresql as the database for Active Recor
 group :development do
   gem 'sqlite3'
+=======
+# Use postgresql as the database for Active Record
+group :development, :test do
+     gem 'sqlite3'
+>>>>>>> parent of 826afa5... change to pg gem
 =======
 # Use postgresql as the database for Active Record
 group :development, :test do
@@ -27,11 +33,14 @@ group :production do
 end
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 # Use postgresql as the database for Active Record
 gem 'sqlite3'
 >>>>>>> parent of c357a90... add pg gem
+=======
+>>>>>>> parent of 826afa5... change to pg gem
 =======
 >>>>>>> parent of 826afa5... change to pg gem
 =======
