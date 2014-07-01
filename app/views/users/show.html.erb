@@ -12,21 +12,28 @@
   	<div class="user_description">
   		<%= @user.description  %>
   	</div>
-		<h1 class="profile_header">Stats</h1>	
+		<h1>Stats</h1>	
 		<h3>Quality</h3>	
 		<div class="progress large-6">
-		  <span class="meter" style="width: 60%"></span>
+		  <span class="meter" style="width: 60%">60%</span>
 		</div>
 		<h3>Followers</h3>	
 		<div class="progress large-6">
-		  <span class="meter" style="width: 70%"></span>
+		  <span class="meter" style="width: 70%">70%</span>
 		</div>
-		<h3>Recommended</h3>	
+		<h3>Boosts</h3>	
 		<div class="progress large-6">
-		  <span class="meter" style="width: 50%"></span>
+		  <span class="meter" style="width: 50%">50%</span>
 		</div>	
-		<h1 class="profile_header">Contributions</h1>
-
+		<h3>Shares</h3>	
+		<div class="progress large-6">
+		  <span class="meter" style="width: 10%">10%</span>
+		</div>
+		<h3>Shares</h3>	
+		<div class="progress large-6">
+		  <span class="meter" style="width: 25%">25%</span>
+		</div>
+		<h1>Contributions</h1>
 		<%=  @articles.each do |article| %>
 			<h1><%= article.title %></h1>
 		<% end %>
