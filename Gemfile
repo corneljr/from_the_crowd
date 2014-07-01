@@ -3,48 +3,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Use postgresql as the database for Active Recor
-group :development do
-  gem 'sqlite3'
-=======
-# Use postgresql as the database for Active Record
-group :development, :test do
-     gem 'sqlite3'
->>>>>>> parent of 826afa5... change to pg gem
-=======
-# Use postgresql as the database for Active Record
-group :development, :test do
-     gem 'sqlite3'
->>>>>>> parent of 826afa5... change to pg gem
-=======
-# Use postgresql as the database for Active Record
-group :development, :test do
-     gem 'sqlite3'
->>>>>>> parent of 826afa5... change to pg gem
-end
-
-group :production do
-     gem 'pg'
-     gem 'rails_12factor'
-end
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 # Use postgresql as the database for Active Record
 gem 'sqlite3'
->>>>>>> parent of c357a90... add pg gem
-=======
->>>>>>> parent of 826afa5... change to pg gem
-=======
->>>>>>> parent of 826afa5... change to pg gem
-=======
->>>>>>> parent of 826afa5... change to pg gem
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
