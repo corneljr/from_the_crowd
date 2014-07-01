@@ -10,6 +10,9 @@
 	<% end %>
 
 	<% @article.comments.each do |comment| %>
-		<p><strong><%#= comment.user.name %></strong>: <%= comment.body %></p>
+		<div class='row'>
+			<div class='large-4 columns'><strong><%= comment.user.name %></strong></div>
+			<div class='large-8 columns'><%= comment.body %></div>
+		</div>
 	<% end %>
 </div>
