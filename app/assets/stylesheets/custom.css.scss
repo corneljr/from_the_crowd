@@ -163,17 +163,13 @@ a.sign-up {
 }
 
 .cover-image {
-	-webkit-webkit-background-size: cover;
-	-moz-webkit-background-size: cover;
-	-ms-webkit-background-size: cover;
-	-o-webkit-background-size: cover;
-	background-size: cover;
+	-webkit-webkit-background-size: contain;
+	-moz-webkit-background-size: contain;
+	-ms-webkit-background-size: contain;
+	-o-webkit-background-size: contain;
+	background-size: contain;
 
-	background: linear-gradient(
-								rgba(0, 0, 0, 0.5), 
-								rgba(0, 0, 0, 0.5)
-								), 
-							url('fenway.jpg') no-repeat center center fixed;
+	background: url('fenway.jpg') no-repeat center center fixed;
 
 	position: fixed;
 	top: 0; right: 0; bottom: 0; left: 0;
@@ -190,6 +186,43 @@ a.sign-up {
 }
 
 //article show
+
+.chart {
+	color: white;
+}
+
+.article-cover-image {
+	-webkit-webkit-background-size: contain;
+	-moz-webkit-background-size: contain;
+	-ms-webkit-background-size: contain;
+	-o-webkit-background-size: contain;
+	background-size: contain;
+
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	opacity: 1;
+}
+
+.show-article-title-container {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.show-article-title {
+	color: white;
+
+}
+
+.show-article-background {
+	padding-top: 30px;
+	background-color: white;
+	bottom: 0;
+	width: 100%;
+	height: 110%;
+}
 
 .show-article-container {
 	width: 50%;

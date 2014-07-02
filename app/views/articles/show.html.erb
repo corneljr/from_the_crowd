@@ -1,29 +1,41 @@
-<div class='show-article-container'>
-	<span class="chart" data-percent="75"><span class="percent">75%</span></span>
-	<h1 class="profile_header"><%= image_tag @article.image.url(:medium) %></h1>
-	<h1 class='title center'><%= @article.title %></h1>
-	<p class='body'><%= @article.body  %><p>
+<div style='background: url(<%= image_path(@article.image.url(:medium)) %>) no-repeat center center fixed;' class="article-cover-image">
 </div>
 
-<div class='comments-container center'>
-	<h3 class='comments-header'>Comments</h3>
-	<%= form_for [@article, @comment] do |f| %>
-		<p><%= f.text_field :body  %><%= f.submit 'Post', class: 'button small' %></p>
-	<% end %>
+<div>
+	<span class="chart" data-percent="75"><span class="percent">75%</span></span>
+</div>
 
-	<% @article.comments.each do |comment| %>
-		<div class='row'>
-			<div class='large-4 columns'>
-				<div class='commenter center'>
-					<%= image_tag "bean.png", class: 'comment-pic' %>
-					<p><strong><%= link_to comment.user.name, comment.user, class: 'username'%></strong></p>
+
+<div class='show-article-title-container center'>
+	<h1 class='show-article-title'><%= @article.title %></h1>
+	<h4 class='show-article-title'>By <%= @article.user.name %></h4>
+</div>
+
+<div class='show-article-background'>
+	<div class='show-article-container'>
+		<p class='body'><%= @article.body  %><p>
+	</div>
+
+	<div class='comments-container center'>
+		<h3 class='comments-header'>Comments</h3>
+		<%= form_for [@article, @comment] do |f| %>
+			<p><%= f.text_field :body  %><%= f.submit 'Post', class: 'button small' %></p>
+		<% end %>
+
+		<% @article.comments.each do |comment| %>
+			<div class='row'>
+				<div class='large-4 columns'>
+					<div class='commenter center'>
+						<%= image_tag "bean.png", class: 'comment-pic' %>
+						<p><strong><%= link_to comment.user.name, comment.user, class: 'username'%></strong></p>
+					</div>
+				</div>
+				<div class='large-8 columns'>
+					<div class='comment-container'>
+						<%= comment.body %>
+					</div>
 				</div>
 			</div>
-			<div class='large-8 columns'>
-				<div class='comment-container'>
-					<%= comment.body %>
-				</div>
-			</div>
-		</div>
-	<% end %>
+		<% end %>
+	</div>
 </div>
