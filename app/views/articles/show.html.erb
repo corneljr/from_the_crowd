@@ -1,5 +1,6 @@
 <div class='show-article-container'>
 	<span class="chart" data-percent="75"><span class="percent">75%</span></span>
+	<h1 class="profile_header"><%= image_tag @user.image.url(:medium) %></h1>
 	<h1 class='title center'><%= @article.title %></h1>
 	<p class='body'><%= @article.body  %><p>
 </div>
