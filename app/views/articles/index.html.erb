@@ -10,11 +10,21 @@
 <div class='background-container'>
 	<div class='article-list-container'>
 	<ul class='article-list'>
+		<% i = 1 %>
 		<% @articles.each do |article|  %>
-			<li class='specific-article'>
-				<h4><%= link_to article.title, article_path(article), class: 'article-link' %></h4>
-				<p class='article-author'>by <%= article.user.name %></p>
-			</li>
+		<div class='row'>
+			<div class='large-2 small-4 columns'>
+				<h2 class='num'><%= i %>.</h2>
+				<% i += 1 %>
+			</div>
+			<div class='large-10 small-8 columns'>
+				<li class='specific-article'>
+					<h4><%= link_to article.title, article_path(article), class: 'article-link' %></h4>
+					<p class='article-author'><%= image_tag(article.user.avatar.url(:thumb), class: 'author-image') %> by <%= article.user.name %></p>
+				</li>
+			</div>
+		</div>
 		<% end %>
 	</ul>
+	</div>
 </div>

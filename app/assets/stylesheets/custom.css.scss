@@ -61,6 +61,18 @@ a.sign-up {
 
 //article index
 
+.num {
+	text-align: right;
+	height: 100px;
+	line-height: 100px;
+}
+
+.author-image {
+	height: 50px;
+	width: 50px;
+	border: 1px solid #ecf0f1;
+	border-radius: 50px;
+}
 
 .specific-article {
 	border-top: 1px solid grey;
@@ -107,7 +119,7 @@ a.sign-up {
 }
 
 .article-list-container {
-	width: 70%;
+	width: 80%;
 	height: 110%;
 	margin-left: auto;
 	margin-right: auto;
