@@ -1,18 +1,23 @@
 .profile_header {
+	width: auto;
+}
 
+.tab-content {
+	border: 1px solid #ecf0f1;
+}
+
+.profile_pic {
 	font-size: 4em;
 	text-align: center;
 	text-transform: capitalize;
-}
-
-img {
 	border-radius: 100px;
 	height: 200px;
 	width: 200px;
-	border: 3px solid #2ecc71;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #ecf0f1;
 	overflow: hidden;
 }
-
 .user_description {
 	height: 200px;
 	width: 100%;
@@ -26,6 +31,12 @@ img {
 }
 h3 {
 	font-weight: 100;
+}
+
+.user-contributions {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 

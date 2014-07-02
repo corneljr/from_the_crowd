@@ -1,38 +1,51 @@
 <div class="row">
-  <div class="large-11 large-centered columns">
-  	<h1 class="profile_header"><%= image_tag @user.avatar.url(:medium) %></h1>
-  	<h1 class="profile_header"><%= @user.name  %></h1>
-  	<div class="progress">
-		  <span class="meter"  style="width: 40%"></span>
-		</div>
-  	<div class="user_description">
-  		<%= @user.description  %>
+  <div class="large-4 columns">
+  	<div class='profile-header'>
+	  	<h1 class="profile_pic center"><%= image_tag @user.avatar.url(:medium) %></h1>
+	  	<h1 class="profile-name center"><%= @user.name  %></h1>
   	</div>
-		<h1>Stats</h1>	
-		<h3>Quality</h3>	
-		<div class="progress large-6">
-		  <span class="meter" style="width: 60%">60%</span>
-		</div>
-		<h3>Followers</h3>	
-		<div class="progress large-6">
-		  <span class="meter" style="width: 70%">70%</span>
-		</div>
-		<h3>Boosts</h3>	
-		<div class="progress large-6">
-		  <span class="meter" style="width: 50%">50%</span>
-		</div>	
-		<h3>Shares</h3>	
-		<div class="progress large-6">
-		  <span class="meter" style="width: 10%">10%</span>
-		</div>
-		<h3>Shares</h3>	
-		<div class="progress large-6">
-		  <span class="meter" style="width: 25%">25%</span>
-		</div>
-		<h1>Contributions</h1>
-		<%=  @articles.each do |article| %>
-			<h1><%= article.title %></h1>
-		<% end %>
-
   </div>
-</div>	
+  <div class='large-8 columns'>
+  	<ul class="tabs" data-tab>
+		  <li class="tab-title active"><a href="#panel2-1">Bio</a></li>
+		  <li class="tab-title"><a href="#panel2-2">Stats</a></li>
+		</ul>
+		<div class="tabs-content">
+		  <div class="content active" id="panel2-1">
+		    <p><%= @user.description %></p>
+		  </div>
+		  <div class="content" id="panel2-2">
+				<h5>Quality</h5>	
+				<div class="progress large-6">
+			  	<span class="meter" style="width: 60%">60%</span>
+				</div>
+				<h5>Followers</h5>	
+				<div class="progress large-6">
+			  	<span class="meter" style="width: 70%">70%</span>
+				</div>
+				<h5>Shares</h5>	
+				<div class="progress large-6">
+			  	<span class="meter" style="width: 50%">50%</span>
+				</div>	
+		  </div>
+		</div>
+	</div>
+</div>
+
+<div class='user-contributions'>
+		<h4>Contributions</h4>
+		<%  @articles.each do |article| %>
+			<p><%= link_to article.title, article %></p>
+		<% end %>
+</div>
+
+
+
+
+
+
+
+
+
+ 
+
