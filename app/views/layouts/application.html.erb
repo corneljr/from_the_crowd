@@ -12,29 +12,45 @@
   </head>
 
   <body>
-    <div class="off-canvas-wrap" data-offcanvas>
-  <div class="inner-wrap">
 
-    <a class="left-off-canvas-toggle" href="#" >Menu</a>
+    <nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><%= link_to "From The Crowd", root_path %></h1>
+    </li>
+  </ul>
 
-    <!-- Off Canvas Menu -->
-    <aside class="left-off-canvas-menu">
-        <ul>
-          <% if current_user %>
-              <li><%= link_to "#{current_user.name}'s Profile", current_user %></li>
-              <li><%= link_to "Sign Out", logout_path %></li>
-          <% else %>
-                <li><%= link_to "Sign Up", new_user_path %></li>
-              <li><%= link_to "Sign In", new_user_session_path %></li>
-          <% end %>
-        </ul>
-    </aside>
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <ul>
+            <% if current_user %>
+                  <li><%= link_to "#{current_user.name}'s Profile", current_user %></li>
+                  <li><%= link_to "Sign Out", logout_path %></li>
+              <% else %>
+                  <li><%= link_to "Sign Up", new_user_path %></li>
+                  <li><%= link_to "Sign In", new_user_session_path %></li>
+              <% end %>
+            </ul>
+    </ul>
+  </section>
+</nav>
+
+        <!-- <header>
+            <ul>
+              <% if current_user %>
+                  <li><%= link_to "#{current_user.name}'s Profile", current_user %></li>
+                  <li><%= link_to "Sign Out", logout_path %></li>
+              <% else %>
+                  <li><%= link_to "Sign Up", new_user_path %></li>
+                  <li><%= link_to "Sign In", new_user_session_path %></li>
+              <% end %>
+            </ul>
+        </header>   -->  
+
     <%= render 'layouts/alerts' %>
     <%= yield %>
-      <!-- close the off-canvas menu -->
-      <a class="exit-off-canvas"></a>
-
-    </div>
+    
   </div>
     <%= javascript_include_tag "application" %>
   </body>
