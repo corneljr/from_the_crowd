@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :users
   resources :articles do 
     resources :comments, only: [:create, :destroy]
+    resources :votes, only: [:create]
   end
 
   get 'login' => 'user_sessions#new', :as => :login
