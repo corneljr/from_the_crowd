@@ -22,6 +22,7 @@ class ArticlesController < ApplicationController
 		@article = Article.find(params[:id])
 		@comment = Comment.new
 		@vote = Vote.new
+		@voted = @article.user_voted(current_user)
 	end
 
 	def update
