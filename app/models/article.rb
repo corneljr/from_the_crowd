@@ -1,4 +1,5 @@
 class Article < ActiveRecord::Base
+	scope :highest_weight, -> { order('weight DESC')}
 	belongs_to :user
 	has_many :comments
 	has_many :votes
@@ -11,4 +12,9 @@ class Article < ActiveRecord::Base
 	def user_voted(user)
 		self.votes.where(user_id: user.id)
 	end
+
+	def vote_average
+		(self.votes.sum(:quality) / self.votes.count) + (self.votes.count * 0.5)
+	end
+
 end

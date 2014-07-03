@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
 	skip_before_filter :require_login, only: [:index, :show]
 
 	def index
-		@articles = Article.all
+		@articles = Article.highest_weight
 	end
 	def new
 		@article = Article.new
@@ -27,7 +27,6 @@ class ArticlesController < ApplicationController
 
 	def update
 		@article = Article.find(params[:id])
-
     @article.update(article_params)
     redirect_to article_path
 	end
