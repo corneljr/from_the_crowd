@@ -1,20 +1,6 @@
-<div style='background: url(<%= image_path(@article.image.url) %>) no-repeat center center fixed;' class="article-cover-image">
-</div>
-
-<div>
-	<span class="chart" data-percent="75"><span class="percent">75%</span></span>
-</div>
-
-<%= form_for [@article, @vote] do |f| %>
-		<p><%= f.range_field :quality, :min=>0, :max=>100, :step=>10, :class=>"slide"%></p>
-		<% if @voted %>
-			<%= f.submit "Vote", disabled: true %>
-		<% else %>
-			<%= f.submit "Vote" %>
-		<% end %>
-	<% end %>
-
-
+<div class="row">
+	<div class="article_img small-11 small-centered columns"><%= image_tag(@article.image.url) %></div>
+</div> 
 
 <div class='show-article-title-container center'>
 	<h1 class='show-article-title'><%= @article.title %></h1>
@@ -22,8 +8,23 @@
 </div>
 
 <div class='show-article-background'>
+	<div>
+		<span class="chart" data-percent="75"><span class="percent">75%</span></span>
+	</div>
 	<div class='show-article-container'>
 		<p class='body'><%= @article.body  %><p>
+			<div class="vote_gauge">
+				<%= form_for [@article, @vote] do |f| %>
+					<p><%= f.range_field :quality, :min=>0, :max=>100, :step=>10, :class=>"range_slide"%></p>
+					<% if @voted %>
+						<%= f.submit "Vote", disabled: true %>
+					<% else %>
+						<div class="text-center">
+							<%= f.submit "Vote", class: "submit_btn" %>
+						</div>
+					<% end %>
+				<% end %>
+			</div>
 	</div>
 
 	<div class='comments-container center'>

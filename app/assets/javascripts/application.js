@@ -23,7 +23,7 @@ $(function(){ $(document).foundation(); });
 				animate: 2000,
 				lineCap:'butt',
 				scaleColor: false,
-				barColor: '#2C3E50',
+				barColor: '#2ecc71',
 				trackColor: 'transparent',
 				lineWidth: 10
 		});
