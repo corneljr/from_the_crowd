@@ -10,11 +10,16 @@ class Article < ActiveRecord::Base
 	validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
 	def user_voted(user)
-		self.votes.where(user_id: user.id)
+		unless user
+			false
+		else
+			!self.votes.where(user_id: user.id).empty?
+		end 
 	end
 
 	def vote_average
 		(self.votes.sum(:quality) / self.votes.count) + (self.votes.count * 0.5)
 	end
+
 
 end
