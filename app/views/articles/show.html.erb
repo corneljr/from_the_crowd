@@ -1,16 +1,18 @@
-<div class="row">
-	<div class="article_img small-11 small-centered columns"><%= image_tag(@article.image.url) %></div>
-</div> 
+
 
 <div class='show-article-title-container center'>
 	<h1 class='show-article-title'><%= @article.title %></h1>
+	<div class="row">
+	<div class="article_img small-11 small-centered columns"><%= image_tag(@article.image.url) %></div>
+</div> 
 	<h4 class='show-article-title'>By <%= @article.user.name %></h4>
 </div>
 
 <div class='show-article-background'>
-	<div>
-		<span class="chart" data-percent="75"><span class="percent">75%</span></span>
-	</div>
+
+			<p class="center"><span class="chart" data-percent="75"><span class="percent">75%</span></span></p>
+
+
 	<div class='show-article-container'>
 		<p class='body'><%= @article.body  %><p>
 			<div class="vote_gauge">

@@ -120,3 +120,15 @@ input[type='range']::-moz-range-thumb {
 	 width: 20px;
 	 outline: none;
 }
+
+
+/*
+	Edit page
+*/
+
+
+textarea#text_area {
+
+	height: 300px;
+	border: none;
+}
