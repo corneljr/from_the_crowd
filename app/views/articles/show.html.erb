@@ -1,35 +1,15 @@
-
-<div style='background: url(<%= image_path(@article.image.url) %>) no-repeat center center fixed;' class="article-cover-image">
-</div>
-
-<div>
+<!-- <div>
 	<span class="chart" data-percent="75"><span class="percent">75%</span></span>
-</div>
+</div> -->
 
-<%= form_for [@article, @vote] do |f| %>
-		<p><%= f.range_field :quality, :min=>0, :max=>100, :step=>10, :class=>"slide"%></p>
-		<% if @voted %>
-			<%= f.submit "Vote", disabled: true %>
-		<% else %>
-			<% if @voted %>
-				<%= f.submit "Vote", disabled %>
-			<% else %>
-				<%= f.submit "Vote" %>
-			<% end %>
-		<% end %>
-	<% end %>
-
-<div class='show-article-title-container center'>
-	<h1 class='show-article-title'><%= @article.title %></h1>
-	<div class="row">
-	<div class="article_img small-11 small-centered columns"><%= image_tag(@article.image.url) %></div>
-</div> 
-	<h4 class='show-article-title'>By <%= @article.user.name %></h4>
+<div class="article-img">
+	<%= image_tag(@article.image.url) %>
+	<h1 class='show-article-title'><span><%= @article.title %></span></h1>
+	<h4 class='show-article-author'><span>By <%= @article.user.name %></span></h4>
 </div>
 
 <div class='show-article-background'>
 
-			<p class="center"><span class="chart" data-percent="75"><span class="percent">75%</span></span></p>
 	<p>Tags: <%= @article.tag_list %></p>
 
 	<div class='show-article-container'>

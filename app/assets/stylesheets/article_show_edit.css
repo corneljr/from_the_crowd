@@ -1,16 +1,35 @@
 
-.article_img {
-	padding: 50px;
+.article-img {
+	position: relative;
+	height: 600px;
+	width: 100%;
+	overflow: hidden;
 }
 
-.article_img img {
-		height: 300px;
-		width: 100%;
+.show-article-title {
+	position: absolute;
+	color: white;	
+	top: 400px;
+	left: 0;
+	width: 100%;
 }
 
-.show-article-title-container {
-	margin-top: 100px;
-	margin-bottom: 100px;
+h1 span {
+	background: rgba(0,0,0,0.7);
+	padding: 10px;
+}
+
+h4 span {
+	background: rgba(0,0,0,0.7);
+	padding: 10px;
+}
+
+.show-article-author {
+	position: absolute;
+	color: white;	
+	top: 475px;
+	left: 0;
+	width: 100%;
 }
 
 .show-article-background {
@@ -22,6 +41,7 @@
 }
 
 .show-article-container {
+	position: relative;
 	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
