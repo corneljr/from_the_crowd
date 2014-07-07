@@ -11,6 +11,11 @@
  
 	<h4 class='show-article-title'>By <%= @article.user.name %></h4>
 </div>
+	
+	<div class="field">
+  <%= f.label :tag_list, "Tags (separated by commas)" %><br />
+  <%= f.text_field :tag_list %>
+	</div>
 
 	<div class='show-article-container'>
 		<p class='body'><%= f.text_area :body, :id => "text_area"  %><p>

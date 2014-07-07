@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get '/about' => 'static_pages#about'
 
+  get 'tags/:tag', to: 'articles#index', as: :tag
+
   resources :user_sessions
   resources :users
   resources :articles do 

@@ -7,6 +7,12 @@
 	<%= link_to "Create Article", new_article_path, class: 'button tiny create-link' %>
 </div>
 
+<div id="tag_cloud">
+  <% tag_cloud Article.tag_counts, %w{s m l} do |tag, css_class| %>
+    <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+  <% end %>
+</div>
+
 <div class='background-container'>
 	<div class='article-list-container'>
 	<ul class='article-list'>
@@ -20,7 +26,7 @@
 			<div class='large-10 small-8 columns'>
 				<li class='specific-article'>
 					<h4><%= link_to article.title, article_path(article), class: 'article-link' %></h4>
-					<p class='article-author'><%= image_tag(article.image.url(:thumb), class: 'author-image') %><%= image_tag(article.user.avatar.url(:thumb), class: 'author-image') %> by <%= article.user.name %></p>
+					<p class='article-author'><%= image_tag(article.image.url(:thumb), class: 'author-image') %><%= image_tag(article.user.avatar.url(:thumb), class: 'author-image') %> by <%= article.user.name %> Tags: <%= raw article.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
 				</li>
 			</div>
 		</div>

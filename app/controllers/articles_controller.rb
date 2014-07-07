@@ -2,7 +2,8 @@ class ArticlesController < ApplicationController
 	skip_before_filter :require_login, only: [:index, :show]
 
 	def index
-		@articles = Article.all
+
+    	@articles = Article.all
 	end
 	def new
 		@article = Article.new
@@ -44,6 +45,6 @@ class ArticlesController < ApplicationController
 	private
 
 	def article_params
-		params.require(:article).permit(:title, :body, :user_id, :image)
+		params.require(:article).permit(:title, :body, :user_id, :image, :tag_list)
 	end
 end
