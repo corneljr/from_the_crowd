@@ -6,18 +6,21 @@
 	<h1 class="profile_header"><%= f.text_field :title  %></h1>
 	<div class="row">
 	<div class="article_img small-11 small-centered columns center"><%= image_tag(@article.image.url) %></div>
-</div> 
-	<div  class="profile_header"><%= f.file_field :image %></div>
+	</div>
+ </div>
+ <div class='show-article-container'>
+	<div  class="profile_header">Choose Picture<%= f.file_field :image, id: "image_file" %></div>
  
 	<h4 class='show-article-title'>By <%= @article.user.name %></h4>
-</div>
+
+
 	
 	<div class="field">
   <%= f.label :tag_list, "Tags (separated by commas)" %><br />
   <%= f.text_field :tag_list %>
 	</div>
 
-	<div class='show-article-container'>
+	
 		<p class='body'><%= f.text_area :body, :id => "text_area"  %><p>
 	</div>
 	
@@ -27,9 +30,3 @@
 
 <% end %>
 
-<style type="text/css">
-	
-	input[name="body"] {
-		font-size: 3em;
-	}
-</style>

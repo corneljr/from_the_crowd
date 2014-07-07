@@ -149,6 +149,15 @@ input[type='range']::-moz-range-thumb {
 
 textarea#text_area {
 
-	height: 300px;
+	height: 400px;
+	font-size: 1.5em;
 	border: none;
 }
+
+#image_file {
+			border: none;
+			color: #2ecc71;
+			background-color: #2ecc71;
+			height: 10px;
+	}
+
