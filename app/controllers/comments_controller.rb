@@ -3,7 +3,6 @@ class CommentsController < ApplicationController
 	before_action :load_article
 
 	def create
-		binding.pry
 		@comment = @article.comments.build(comment_params)
 		@comment.user_id = current_user.id
 		

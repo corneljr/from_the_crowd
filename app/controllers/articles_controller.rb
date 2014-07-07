@@ -4,9 +4,11 @@ class ArticlesController < ApplicationController
 	def index
 		@articles = Article.highest_weight
 	end
+
 	def new
 		@article = Article.new
 	end
+
 	def create
 		@article = Article.new(article_params)
 
@@ -15,7 +17,6 @@ class ArticlesController < ApplicationController
 		else
 			render "new"
 		end
-
 	end
 
 	def show
@@ -44,6 +45,6 @@ class ArticlesController < ApplicationController
 	private
 
 	def article_params
-		params.require(:article).permit(:title, :body, :user_id, :image)
+		params.require(:article).permit(:title, :body, :user_id, :image, :tag_list)
 	end
 end

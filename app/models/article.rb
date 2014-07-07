@@ -1,3 +1,5 @@
+require 'acts-as-taggable-on'
+
 class Article < ActiveRecord::Base
 	scope :highest_weight, -> { order('weight DESC')}
 	belongs_to :user
@@ -6,6 +8,7 @@ class Article < ActiveRecord::Base
 
 	validates :body, :title, presence: true
 
+	# article images
 	has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/assets/fenway.jpg"
 	validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
@@ -22,4 +25,6 @@ class Article < ActiveRecord::Base
 	end
 
 
+	# tagging
+  acts_as_taggable
 end
