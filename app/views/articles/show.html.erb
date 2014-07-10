@@ -1,53 +1,45 @@
-<!-- <div>
-	<span class="chart" data-percent="75"><span class="percent">75%</span></span>
-</div> -->
+<div class='article-show-container'>
+	<div class='article-title-container'>
+		<h3 class='article-show-title'>
+			<%= @article.title %>
+		</h3>
+		<p class='article-author-info'>Contributed by <%= link_to @article.user.name, @article.user %> on <%= @article.created_at.strftime("%B %d, %Y") %>
+		</p>
+	</div>
+	<div class='row'>
+		<div class="large-9 small-8 columns">
 
-<div class="article-img">
-	<%= image_tag(@article.image.url) %>
-	<h1 class='show-article-title'><span><%= @article.title %></span></h1>
-	<h4 class='show-article-author'><span>By <%= @article.user.name %></span></h4>
-</div>
-
-	<div class="row">
-	<div class="large-3 columns">
-		<div class="vote_gauge">
-				<%= form_for [@article, @vote] do |f| %>
-					<p><%= f.range_field :quality, :min=>0, :max=>100, :step=>10, :class=>"range_slide"%></p>
-					<% if @voted %>
-						<div class="text-center">
-							<%= f.submit "Vote", disabled: true, class: "submit_btn" %>
-						</div>
-					<% else %>
-						<div class="text-center">
-							<%= f.submit "Vote", class: "submit_btn" %>
-						</div>
-					<% end %>
-				<% end %>
+			<div class='img-container'>
+				<div class="article-img">
+					<%= image_tag(@article.image.url) %>
+				</div>
 			</div>
-	<br>
-	<br>
-	<br>
-	 <% @article.tag_list.each do |tag| %>
-	  	<p class="text-center"><%= tag %></p>	
-	 <% end %>
-
-	</div>
-		<div class="large-9 columns">
-
 			<p class='body'><%= @article.body  %><p>
-
-		</div>
-	</div>
-	<div class='comments-container center'>
-		<h3 class='comments-header'>Comments</h3>
-		<%= form_for [@article, @comment], remote: true do |f| %>
-			<p><%= f.text_field :body  %><%= f.submit 'Post', class: 'button small' %></p>
-		<% end %>
-		
-		<div class='comment-list'>
-			<%= render @comments %>
 		</div>
 
+		<div class="large-3 small-4 columns">
+			<div class='article-info-container'>
+				<h5 class='info-header'>Leagues</h5>
+					<div class='info'></div>
+				<h5 class='info-header'>Players</h5>
+					<div class='info'></div>
+				<h5 class='info-header'>Teams</h5>
+					<div class='info'></div>
+			</div>
+		</div>
 	</div>
 </div>
 
+
+<div class='comments-container center'>
+
+	<h3 class='comments-header'>Comments</h3>
+	<%= form_for [@article, @comment], remote: true do |f| %>
+		<p><%= f.text_field :body  %><%= f.submit 'Post', class: 'button small' %></p>
+	<% end %>
+
+	<div class='comment-list'>
+		<%= render @comments %>
+	</div>
+
+</div>
