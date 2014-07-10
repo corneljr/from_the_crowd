@@ -4,9 +4,48 @@
 
 #tag_cloud {
   width: 400px;
+  margin: 0 auto;
+  padding-bottom: 50px;
   line-height: 1.6em;
   .s { font-size: 0.8em; }
   .m { font-size: 1.2em; }
   .l { font-size: 1.8em; }
 }
+#index-intro {
+		padding: 30px;
+}
 
+.index-image {
+	height: 200px;
+	width: 200px;
+	display: block;
+	overflow: hidden;
+}
+
+.article-card {
+	height: 300px;
+	width: 20%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	float: left;
+	opacity: 1;
+  transition: opacity .55s ease-in-out;
+    -moz-transition: opacity .55s ease-in-out;
+    -webkit-transition: opacity .55s ease-in-out;
+}
+.article-card:hover {
+	opacity: 0.6;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+	
+}
+.article-card p {
+		text-align: left;
+}
+
+.container {
+	width: 90%;
+	margin: auto;
+    text-align: center;
+}

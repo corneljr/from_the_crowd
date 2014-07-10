@@ -1,9 +1,6 @@
-<div class="cover-image">
-</div>
 
-
-<div class='center article-title-container'>
-	<h1 class='articles-title'>Trending Articles</h1>
+<div id="index-intro" class="center">
+	<h2>All | Most Discussed | Top Rated | Most Recent</h2>
 	<%= link_to "Create Article", new_article_path, class: 'button tiny create-link' %>
 </div>
 
@@ -13,24 +10,19 @@
   <% end %>
 </div>
 
-<div class='background-container'>
-	<div class='article-list-container'>
-	<ul class='article-list'>
-		<% i = 1 %>
+
 		<% @articles.each do |article|  %>
-		<div class='row'>
-			<div class='large-2 small-4 columns'>
-				<h2 class='num'><%= i %>.</h2>
-				<% i += 1 %>
-			</div>
-			<div class='large-10 small-8 columns'>
-				<li class='specific-article'>
-					<h4><%= link_to article.title, article_path(article), class: 'article-link' %></h4>
-					<p class='article-author'><%= image_tag(article.image.url(:thumb), class: 'author-image') %><%= image_tag(article.user.avatar.url(:thumb), class: 'author-image') %> by <%= article.user.name %> Tags: <%= raw article.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
-				</li>
-			</div>
-		</div>
+				<%= link_to article_path(article) do %>
+					<div class="article-card" style="background-image: url(<%= article.image.url %>)" >
+						<h2 class="center a-title"><%= article.title  %></h2>
+							<p>by <%= article.user.name %></p> 
+					</div>		
+				<% end %>		
 		<% end %>
-	</ul>
-	</div>
-</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+			$('h2').hide();
+	});
+		
+</script>
