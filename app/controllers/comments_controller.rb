@@ -5,13 +5,17 @@ class CommentsController < ApplicationController
 	def create
 		@comment = @article.comments.build(comment_params)
 		@comment.user_id = current_user.id
-		
 
 		if @comment.save
-			redirect_to article_path(@article)
+			respond_to do |format|
+				format.html
+				format.js
+			end
 		else
 			render "articles/show"
 		end 
+
+		
 	end
 
 	def delete
