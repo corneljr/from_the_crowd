@@ -1,13 +1,14 @@
 <div class='article-show-container'>
-	<div class='article-title-container'>
-		<h3 class='article-show-title'>
-			<%= @article.title %>
-		</h3>
-		<p class='article-author-info'>Contributed by <%= link_to @article.user.name, @article.user %> on <%= @article.created_at.strftime("%B %d, %Y") %>
-		</p>
-	</div>
+	
 	<div class='row'>
 		<div class="large-9 small-8 columns">
+			<div class='article-title-container'>
+				<h3 class='article-show-title'>
+					<%= @article.title %>
+				</h3>
+				<p class='article-author-info'>Contributed by <%= link_to @article.user.name, @article.user %> on <%= @article.created_at.strftime("%B %d, %Y") %>
+				</p>
+			</div>
 
 			<div class='img-container'>
 				<div class="article-img">
@@ -38,10 +39,9 @@
 		<%= render @comments %>
 	</div>
 	<div class='post-comment'>
-	<%= form_for [@article, @comment], remote: true do |f| %>
-		<p><%= f.text_area :body, class: 'comment-area'  %><%= f.submit 'Post', class: 'button small' %></p>
-
-		
+		<%= form_for [@article, @comment], remote: true do |f| %>
+		<p><%= f.text_area :body, class: 'comment-area' %><%= f.submit 'Post', class: 'button small' %></p>
 	<% end %>
 	</div>
 </div>
+

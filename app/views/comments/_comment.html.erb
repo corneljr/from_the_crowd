@@ -1,7 +1,7 @@
 <div class='row comments'>
 	<div class='large-3 columns'>
 		<div class='commenter center'>
-			<p class='comment-name'><strong><%= link_to comment.user.name, comment.user, class: 'username'%> says:</strong></p>
+			<p class='comment-name'><strong><%= link_to comment.user.name, comment.user, class: 'user-name'%> says:</strong></p>
 			<p class='comment-time'><%= comment.created_at.strftime("%B %d, %Y %l:%M %p") %></p>
 		</div>
 	</div>
