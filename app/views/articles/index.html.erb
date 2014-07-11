@@ -5,8 +5,8 @@
 </div>
 
 <div id="tag_cloud">
-  <% tag_cloud Article.tag_counts, %w{s m l} do |tag, css_class| %>
-    <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+  <% tag_cloud Article.tag_counts, %w{s m l} do |tag| %>
+    <%= link_to tag.name, tag_path(tag.name)%>
   <% end %>
 </div>
 
@@ -14,15 +14,14 @@
 		<% @articles.each do |article|  %>
 				<%= link_to article_path(article) do %>
 					<div class="article-card" style="background-image: url(<%= article.image.url %>)" >
-						<h2 class="center a-title"><%= article.title  %></h2>
+						<h3 class="center a-title"><%= article.title  %></h3>
 							<p>by <%= article.user.name %></p> 
 					</div>		
 				<% end %>		
 		<% end %>
-
-<script type="text/javascript">
-	$(document).ready(function() {
-			$('h2').hide();
-	});
-		
-</script>
+	
+	 <%= link_to new_article_path do %>
+				<div class="article-card" style="background-color: black;">
+						<h2 class="center a-title">Contribute your ideas today.</h2>
+				</div>		
+		<% end %>	
