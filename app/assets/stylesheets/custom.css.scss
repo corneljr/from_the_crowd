@@ -18,6 +18,47 @@ h1, h2, h3, h4, h5, h6 {
 .center {
 	text-align: center;
 }
+
+//header
+
+.from-the-crowd {
+	font-size: 1.5rem !important;
+	letter-spacing: 2px;
+}
+
+.from-the-crowd-container {
+	width: 125px;
+	border: 3px solid black;
+	padding: 2px;
+}
+
+.top-bar .name h1 {
+	line-height: 30px !important;
+}
+
+.top-bar {
+	height: 90px !important;
+	background: white !important;
+	padding: 10px;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+	line-height: 90px !important; 
+	background: white !important;
+	color: black;
+	font-weight: bold;
+}
+
+li.header-link a:hover {
+	color: black !important;
+}
+
+.crowd {
+	font-size: 2rem;
+	letter-spacing: 2px;
+	font-weight: bold;
+}
+
 //footer
 a.footer-link {
 	color:white;

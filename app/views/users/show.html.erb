@@ -33,7 +33,7 @@
 </div>
 
 <div class='user-contributions center'>
-		<h4>Contributions</h4>
+		<h4>Contributions <br><small><%= @user.name %> has <%= @articles.count %> contributions</small></h4>
 		<%  @articles.each do |article| %>
 			<p><%= link_to article.title, article %></p>
 		<% end %>
