@@ -1,12 +1,12 @@
 <div class='article-show-container'>
 	
 	<div class='row'>
-		<div class="large-9 small-8 columns">
+		<div class="large-10 small-8 columns">
 			<div class='article-title-container'>
 				<h3 class='article-show-title'>
 					<%= @article.title %>
 				</h3>
-				<p class='article-author-info'>Contributed by <%= link_to @article.user.name, @article.user %> on <%= @article.created_at.strftime("%B %d, %Y") %>
+				<p class='article-author-info'>Contributed by <%= link_to @article.user.name, @article.user, class: 'author-link' %> on <%= @article.created_at.strftime("%B %d, %Y") %>
 				</p>
 			</div>
 
@@ -18,7 +18,7 @@
 			<p class='body'><%= @article.body  %><p>
 		</div>
 
-		<div class="large-3 small-4 columns">
+		<div class="large-2 small-4 columns">
 			<div class='article-info-container'>
 				<h5 class='info-header'>Leagues</h5>
 					<div class='info'></div>
