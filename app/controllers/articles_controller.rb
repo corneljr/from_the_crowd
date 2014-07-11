@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
 	def show
 		@article = Article.find(params[:id])
 		@comment = Comment.new
-		@comments = @article.comments.order('created_at DESC')
+		@comments = @article.comments.order('created_at ASC')
 		@vote = Vote.new
 		@voted = @article.user_voted(current_user)
 	end

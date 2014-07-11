@@ -9,6 +9,8 @@
     <%= stylesheet_link_tag  "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
+    <script src="/path-to-wysihtml5/parser_rules/advanced.js"></script>
+    <script src="/path-to-wysihtml5/dist/wysihtml5-0.3.0.min.js"></script>
   </head>
 
   <body>
@@ -36,18 +38,6 @@
     </ul>
   </section>
 </nav>
-
-        <!-- <header>
-            <ul>
-              <% if current_user %>
-                  <li><%= link_to "#{current_user.name}'s Profile", current_user %></li>
-                  <li><%= link_to "Sign Out", logout_path %></li>
-              <% else %>
-                  <li><%= link_to "Sign Up", new_user_path %></li>
-                  <li><%= link_to "Sign In", new_user_session_path %></li>
-              <% end %>
-            </ul>
-        </header>   -->  
 
     <%= render 'layouts/alerts' %>
     <%= yield %>
