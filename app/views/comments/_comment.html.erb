@@ -7,7 +7,9 @@
 	</div>
 	<div class='large-9 columns'>
 		<div class='comment-container'>
-			<p class='comment-body'><%= comment.body %></p>
+			<div class='comment-body-container'>
+				<%= simple_format(comment.body, class: 'comment') %>
+			</div>
 		</div>
 	</div>
 </div>

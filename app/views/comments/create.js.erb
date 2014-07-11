@@ -1,4 +1,4 @@
-$('<%= j(render @comment) %>').hide().prependTo('.comment-list').fadeIn('slow');
+$('<%= j(render @comment) %>').hide().appendTo('.comment-list').fadeIn('slow');
 $('#comment_body').val('');
 
 

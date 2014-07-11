@@ -29,19 +29,18 @@
 			</div>
 		</div>
 	</div>
-</div>
 
+	<div class='comments-container center'>
+		<h3 class='comments-heading'><%= @article.comments.size %> Comments on "<%= @article.title %>"</h3>
 
-<div class='comments-container center'>
-	<h3 class='comments-heading'><%= @article.comments.size %> Comments on "<%= @article.title %>"</h3>
-
-	<div class='comment-list'>
-		<%= render @comments %>
-	</div>
-	<div class='post-comment'>
-		<%= form_for [@article, @comment], remote: true do |f| %>
-		<p><%= f.text_area :body, class: 'comment-area' %><%= f.submit 'Post', class: 'button small' %></p>
-	<% end %>
+		<div class='comment-list'>
+			<%= render @comments %>
+		</div>
+		<div class='post-comment'>
+			<%= form_for [@article, @comment], remote: true do |f| %>
+			<p><%= f.text_area :body, class: 'comment-area' %><%= f.submit 'Post', class: 'button small' %></p>
+		<% end %>
+		</div>
 	</div>
 </div>
 

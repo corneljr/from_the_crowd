@@ -69,6 +69,7 @@
 }
 
 .body {
+	padding-top: 40px;
 	font-size: 1.2rem;
 	padding-bottom: 80px;
 	line-height: 2rem;
@@ -160,9 +161,13 @@ input[type='range']::-moz-range-thumb {
 	border-bottom: 1px solid #bdc3c7;
 }
 
+.comment {
+	text-align: left;
+}
+
 .comments-heading {
 	text-align: left;
-	margin-left: 15%;
+	margin-left: 5%;
 	padding-bottom: 20px;
 }
 
@@ -175,6 +180,11 @@ input[type='range']::-moz-range-thumb {
 
 .comment-area {
 	height: 100px;
+}
+
+.comment-container {
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 
