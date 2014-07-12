@@ -1,21 +1,21 @@
 <div class='article-show-container'>
-	
-	<div class='row'>
-		<div class="large-10 small-8 columns">
-			<div class='article-title-container'>
+
+	<div class='article-title-container'>
 				<h3 class='article-show-title'>
 					<%= @article.title %>
 				</h3>
 				<p class='article-author-info'>Contributed by <%= link_to @article.user.name, @article.user, class: 'author-link' %> on <%= @article.created_at.strftime("%B %d, %Y") %>
 				</p>
 			</div>
+	
+	<div class='row'>
+		<div class="large-10 small-8 columns">
 
 			<div class='img-container'>
 				<div class="article-img">
 					<%= image_tag(@article.image.url) %>
 				</div>
 			</div>
-			<p class='body'><%= @article.body  %><p>
 		</div>
 
 		<div class="large-2 small-4 columns">
@@ -30,6 +30,11 @@
 		</div>
 	</div>
 
+	<div class='article-body'>
+		<p class='body'><%= @article.body %><p>
+	</div>
+
+
 	<div class='comments-container center'>
 		<h3 class='comments-heading'><%= @article.comments.size %> Comments on "<%= @article.title %>"</h3>
 
@@ -41,4 +46,9 @@
 		</div>
 	</div>
 </div>
+<style type="text/css">
+	.clear {
+		clear: both;
+	}
+</style>
 

@@ -30,5 +30,7 @@ $(function(){ $(document).foundation(); });
 				barColor: '#2ecc71',
 				trackColor: 'transparent',
 				lineWidth: 10
-		});
+});
+
+
 	

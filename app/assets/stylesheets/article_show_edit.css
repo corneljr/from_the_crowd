@@ -11,7 +11,6 @@
 }
 
 .article-info-container {
-	margin-top: 133px;
 	width: 100%;
 }
 
@@ -31,6 +30,12 @@
 
 .info {
 	margin-bottom: 40px;
+}
+
+.article-body {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;w
 }
 
 .article-show-container {
@@ -81,10 +86,6 @@
 	font-size: 1.2rem;
 	padding-bottom: 80px;
 	line-height: 2rem;
-}
-
-.comment-header {
-
 }
 
 a.user-name {
