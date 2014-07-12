@@ -20,6 +20,10 @@
       <div class="reg_input"><%= f.text_field :email %></div>
     </div>
     <div class="field">
+      <div class="reg_label"><%= f.label :description %></div>
+      <div class="reg_input"><%= f.text_area :description, placeholder: 'tell us about yourself..' %></div>
+    </div>
+    <div class="field">
       <div class="reg_label"><%= f.label :password %></div>
       <div class="reg_input"><%= f.password_field :password %></div>
     </div>

@@ -19,6 +19,12 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 }
 
+.alerts {
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 .field_with_errors {
 	background-color: white !important;
 }
@@ -138,6 +144,7 @@ a.sign-up {
 	width: 70%;
 	margin-left: auto;
 	margin-right: auto;
+	padding-bottom: 10px;
 }
 
 //article index

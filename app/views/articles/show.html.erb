@@ -1,12 +1,12 @@
 <div class='article-show-container'>
 
 	<div class='article-title-container'>
-				<h3 class='article-show-title'>
-					<%= @article.title %>
-				</h3>
-				<p class='article-author-info'>Contributed by <%= link_to @article.user.name, @article.user, class: 'author-link' %> on <%= @article.created_at.strftime("%B %d, %Y") %>
-				</p>
-			</div>
+		<h3 class='article-show-title'>
+			<%= @article.title %>
+		</h3>
+		<p class='article-author-info'>Contributed by <%= link_to @article.user.name, @article.user, class: 'author-link' %> on <%= @article.created_at.strftime("%B %d, %Y") %>
+		</p>
+	</div>
 	
 	<div class='row'>
 		<div class="large-10 small-8 columns">
