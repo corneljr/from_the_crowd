@@ -12,16 +12,24 @@
 	display: none;
 }
 
-.user-link:hover {
-	background-color: white !important;
-	color: black !important;
-}
-
-.user-nav {
+.user-link {
 	font-size: 1.5rem;
 	font-weight: bold;
 }
 
 .user-link {
-	color:black !important;
+	color: black;
+	display: inline;
+}
+
+.row {
+	clear: both;
+}
+
+.user-info {
+	width: 50%;
+}
+
+.user-card {
+	height: 300px;
 }

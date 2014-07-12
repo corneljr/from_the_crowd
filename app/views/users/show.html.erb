@@ -1,23 +1,25 @@
 <div class="row">
-  <div class="large-3 columns">
+  <div class="large-4 columns">
   	<div class='profile-header'>
 	  	<h1 class="profile_pic center"><%= image_tag @user.avatar.url(:medium) %></h1>
 	  	<h1 class="profile-name center"><%= @user.name  %></h1>
   	</div>
   </div>
-  <div class='large-9 columns'>
-  	<div class='user-nav'>
-	  	<%= link_to 'About', '#', class: 'user-link'  %> |
-	  	<%= link_to 'Stats', '#', class: 'user-link' %>
-  	</div>
-  	<div class='user-card'>
-  		<div class='user-description'>
-  			<p>description</p>
-  		</div>
+  <div class='large-8 columns'>
+  	<div class='user-info'>
+	  	<div class='user-nav'>
+		  	<p class='user-about-link user-link'>&nbsp;About&nbsp;</p>
+		  	<p class='user-link'>|</p>
+		  	<p class='user-stats-link user-link'>&nbsp;Stats&nbsp;</p>
+	  	</div>
+  		<div class='user-card'>
+	  		<div class='user-description'>
+	  			<p><%= @user.description %></p>
+	  		</div>
   		<div class='user-stats'>
   			<p>stats</p>
   		</div>
-		</div>
+  	</div>
 	</div>
 </div>
 
