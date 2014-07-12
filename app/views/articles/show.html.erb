@@ -37,9 +37,7 @@
 			<%= render @comments %>
 		</div>
 		<div class='post-comment'>
-			<%= form_for [@article, @comment], remote: true do |f| %>
-			<p><%= f.text_area :body, class: 'comment-area' %><%= f.submit 'Post', class: 'button small' %></p>
-		<% end %>
+			<%= render 'comments/comment_form' %>
 		</div>
 	</div>
 </div>

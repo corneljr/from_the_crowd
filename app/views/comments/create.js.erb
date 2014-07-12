@@ -1,4 +1,11 @@
-$('<%= j(render @comment) %>').hide().appendTo('.comment-list').fadeIn('slow');
-$('#comment_body').val('');
+<% unless @comment.errors.present? %>
+	$('<%= j(render @comment) %>').hide().appendTo('.comment-list').fadeIn('slow')
+<% end %>
+
+$('.post-comment').html('<%= j(render "comments/comment_form") %>');
+$('#comment_body').val('');	
+
+
+
 
 

@@ -1,0 +1,15 @@
+<div class='post-comment'>
+	<%= form_for [@article, @comment], remote: true do |f| %>
+
+		<% if @comment.errors.present? %>
+			<% @comment.errors.full_messages.each do |error| %>
+				<div class='error'>
+					<%= error %>
+				</div>
+			<% end %>
+		<% end %>
+
+			<p><%= f.text_area :body, class: 'comment-area' %>
+				<%= f.submit 'Post', class: 'button small' %></p>
+	<% end %>
+</div>

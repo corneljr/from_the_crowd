@@ -2,7 +2,10 @@ class UserSessionsController < ApplicationController
   skip_before_filter :require_login, only: [:destroy, :new, :create]
 
   def new
-  
+    respond_to do |format|
+      format.js {render :js => "window.location = '/user_sessions/new'"}
+      format.html
+    end
   end
 
   def create
