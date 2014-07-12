@@ -23,8 +23,9 @@
 }
 
 .article-card {
-	height: 300px;
-	width: 20%;
+	border: 10px solid white;
+	height: 400px;
+	width: 25%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	float: left;
@@ -34,18 +35,44 @@
     -webkit-transition: opacity .55s ease-in-out;
 }
 .article-card:hover {
-	opacity: 0.6;
+	opacity: 0.8;
     transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
     -webkit-transition: opacity 1s ease-in-out;
 	
 }
+.article-card h3 {
+	opacity: 1 !important;
+	height: 30%;
+	overflow: hidden;
+
+}
 .article-card p {
 		text-align: left;
+		background-color: black;
+		position: relative;
+		top: 230px;
+		color: white;
+		padding: 5px;
+		font-size: 1.5em;
+
 }
 
 .container {
 	width: 90%;
 	margin: auto;
     text-align: center;
+}
+
+#tag_cloud a {
+	background-color: black;
+	color: white;
+	padding: 5px;
+	font-size: 1.5em;
+}
+
+#tag_cloud a:hover {
+	
+	opacity: 0.8;
+
 }
