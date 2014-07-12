@@ -1,3 +1,27 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//profile page
+
+.user-description {
+
+}
+
+.user-stats {
+	display: none;
+}
+
+.user-link:hover {
+	background-color: white !important;
+	color: black !important;
+}
+
+.user-nav {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.user-link {
+	color:black !important;
+}

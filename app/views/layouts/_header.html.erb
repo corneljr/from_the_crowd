@@ -12,8 +12,8 @@
       <ul class="right">
         <% if current_user %>
               <li class='header-link'><%= link_to "Articles", articles_path %></li>
-              <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Sign Out", logout_path %></li>
+              <li class='header-link'><%= link_to "Profile", current_user %></li>
+              <li class='header-link'><%= link_to "Sign Out", logout_path %></li>
           <% else %>
               <li class='header-link'><%= link_to "Sign Up", new_user_path %></li>
               <li class='header-link'><%= link_to "Sign In", new_user_session_path %></li>

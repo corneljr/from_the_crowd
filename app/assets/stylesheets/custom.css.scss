@@ -58,6 +58,11 @@ div.error {
 	letter-spacing: 2px;
 }
 
+.from-the-crowd:hover {
+	background-color: black;
+	color: white;
+}
+
 .from-the-crowd-container {
 	width: 125px;
 	border: 3px solid black;
@@ -246,7 +251,6 @@ a.sign-up {
 .article-body {
 	resize: none;
 	font-size: 1rem;
-	height: 400px;
 }
 
 .article-title {
