@@ -27,7 +27,7 @@
 	<div class='pending-articles'>
 		<h4>Pending Articles</h4>
 		<% @saved_articles.each do |article| %>
-		<p class='saved-article-link'><% link_to article.title, edit_article_path(article) %></p>
+		<p class='saved-article-link'><%= link_to article.title, edit_article_path(article) %></p>
 		<% end %>
 	</div>
 <% end %>

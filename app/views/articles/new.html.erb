@@ -5,6 +5,6 @@
 		<%= f.text_field :tag_list, placeholder: 'Tags', class: 'new-article article-title'  %>
 		<%= f.text_area :body, placeholder: 'Write here..', class: 'new-article article-text-area'  %>
 		<%= f.select :post_status, options_for_select(['save','post']), class: 'submission-type' %>
-		<div class='article-post'><%= f.submit 'Post', class: 'button tiny right post'%></div>         
+		<div class='article-post'><%= f.submit 'Submit', class: 'button tiny right post'%></div>         
 	<% end %>
 </div>
