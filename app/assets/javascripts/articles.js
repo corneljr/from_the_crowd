@@ -23,5 +23,6 @@ $(document).ready(function(){
       }
     });
   }
-	
+  $('#top-rated').children().fadeOut();
+	 
 });

@@ -15,6 +15,13 @@
 		padding: 30px;
 }
 
+.sort-link {
+	width: 150px;
+}
+.sort-link {
+	background-color: white;
+}
+
 .index-image {
 	height: 200px;
 	width: 200px;
@@ -57,14 +64,15 @@
 }
 
 #tag_cloud a {
-	background-color: black;
-	color: white;
+	background-color: #BFBFBF;
 	padding: 5px;
 	font-size: 1.5em;
+	border-radius: 10px;
 }
 
 #tag_cloud a:hover {
 	opacity: 0.8;
+	color: black;
 }
 
 .contribute_today {

@@ -3,15 +3,19 @@ class ArticlesController < ApplicationController
 
 	def index
 		@articles = if params[:tag]
-  	  	Article.where(post_status: 'post').tagged_with(params[:tag])
+  	  	Article.highest_weight.where(post_status: 'post').tagged_with(params[:tag])
 	  else
 	    	Article.highest_weight.where(post_status: 'post')
 	  end.order('created_at DESC').page(params[:page])
 
+	  @recent_articles = Article.most_recent
+	  @most_discussed = Article.discussed
+
 	  respond_to do |format|
-    	format.js # allows the controller to respond to Javascript
+    	format.js
     	format.html
   	end
+
 
 	end
 
