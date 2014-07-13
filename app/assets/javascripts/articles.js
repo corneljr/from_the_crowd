@@ -23,6 +23,7 @@ $(document).ready(function(){
       }
     });
   }
-  $('#top-rated').children().fadeOut();
+  $('#top-rated').fadeOut();
+  $('#most-discussed').fadeOut();
 	 
 });
