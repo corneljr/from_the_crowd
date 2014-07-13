@@ -9,7 +9,7 @@
 	</div>
 	
 	<div class='row'>
-		<div class="large-10 small-8 columns">
+		<div class="large-10 small-9 columns">
 
 			<div class='img-container'>
 				<div class="article-img">
@@ -18,7 +18,7 @@
 			</div>
 		</div>
 
-		<div class="large-2 small-4 columns">
+		<div class="large-2 small-3 columns">
 			<div class='article-info-container'>
 				<h5 class='info-header'>Leagues</h5>
 					<div class='info'></div>
@@ -26,6 +26,22 @@
 					<div class='info'></div>
 				<h5 class='info-header'>Teams</h5>
 					<div class='info'></div>
+				<h5 class='info-header'>Rating</h5>
+					<div class="vote_gauge">
+	  				<%= form_for [@article, @vote] do |f| %>
+	  					<p class='quality-form'><%= f.range_field :quality, :min=>0, :max=>100, :step=>10 %></p>
+	  					<p class='form-value'></p>
+	  					<% if @voted %>
+	  						<%= f.submit "Vote", disabled: true %>
+	 	  					<div class="text-center">
+	 							 <%= f.submit "Vote", disabled: true, class: "vote-button" %>
+	 					  	</div>
+	  					<% else %>
+	  						<div class="text-center">
+	  							<%= f.submit "Vote", class: "vote-button" %>
+	  					<% end %>
+	  				<% end %>
+	  			</div>
 			</div>
 		</div>
 	</div>
