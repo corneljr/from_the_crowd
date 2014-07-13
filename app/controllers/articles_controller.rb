@@ -35,7 +35,7 @@ class ArticlesController < ApplicationController
 		@comment = Comment.new
 		@comments = @article.comments.order('created_at ASC')
 		@vote = Vote.new
-		@voted = @article.user_voted(current_user)
+		@average = @article.votes.average(:quality).to_i
 	end
 
 	def update

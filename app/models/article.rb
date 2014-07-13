@@ -24,6 +24,10 @@ class Article < ActiveRecord::Base
 		(self.votes.sum(:quality) / self.votes.count) + (self.votes.count * 0.5)
 	end
 
+	def destroy?
+		self.votes.count > 10 && self.votes.average(:quality).to_i < 40
+	end
+
 	# tagging
   acts_as_taggable
 end
