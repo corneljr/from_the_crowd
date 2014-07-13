@@ -22,3 +22,12 @@ $container.imagesLoaded(function(){
     isAnimated: true,
   });
 });
+
+$(document).ready(function(){
+	
+	$('#vote_quality').change( function() {
+		var value = $('#vote_quality').val();
+		$('.form-value').html('<p>' + value + '</p>');
+	});
+	
+});
