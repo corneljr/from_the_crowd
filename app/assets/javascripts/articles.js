@@ -14,11 +14,12 @@
 // 		$(this).find('p').fadeOut(200);
 // });
 
-var $container = $('#articles');
-$container.imagesLoaded(function(){
-  $container.masonry({
+var container = $('#articles');
+container.imagesLoaded(function(){
+  container.masonry({
     itemSelector : '.article-card',
     isFitWidth: true,
-    isAnimated: true,
+  }).imagesLoaded(function() {
+    $(this).masonry('reload');
   });
 });
