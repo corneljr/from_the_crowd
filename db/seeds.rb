@@ -29,5 +29,5 @@ end
 end
 
 titles.each do |title| 
-	Article.create(title: title, body: lorem, user_id: rand(1..10))
+	Article.create(title: title, body: lorem, user_id: rand(1..10), post_status: 'post')
 end

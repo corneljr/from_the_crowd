@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
 	skip_before_filter :require_login, only: [:index, :show]
 
 	def index
-		@articles = Article.highest_weight
+		@articles = Article.where(post_status: 'post').highest_weight
 	end
 
 	def new
@@ -47,6 +47,6 @@ class ArticlesController < ApplicationController
 	private
 
 	def article_params
-		params.require(:article).permit(:title, :body, :user_id, :image, :tag_list)
+		params.require(:article).permit(:title, :body, :user_id, :image, :tag_list, :post_status)
 	end
 end

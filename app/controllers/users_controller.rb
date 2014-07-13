@@ -7,7 +7,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @articles = @user.articles
+    @articles = @user.articles.where(post_status: 'post')
+    @saved_articles = @user.articles.where(post_status: 'save')
   end
 
   def new
