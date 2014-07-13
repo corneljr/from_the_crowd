@@ -23,6 +23,15 @@
 	</div>
 </div>
 
+<% if @user == current_user && @saved_articles.present? %>
+	<div class='pending-articles'>
+		<h4>Pending Articles</h4>
+		<% @saved_articles.each do |article| %>
+		<p class='saved-article-link'><% link_to article.title, edit_article_path(article) %></p>
+		<% end %>
+	</div>
+<% end %>
+
 <div class='user-contributions center'>
 		<h4>Contributions <br><small><%= @user.name %> has <%= @articles.count %> contributions</small></h4>
 
