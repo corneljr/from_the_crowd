@@ -24,7 +24,6 @@ class Article < ActiveRecord::Base
 		(self.votes.sum(:quality) / self.votes.count) + (self.votes.count * 0.5)
 	end
 
-
 	# tagging
   acts_as_taggable
 end
