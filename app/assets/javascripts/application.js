@@ -16,7 +16,6 @@
 //= require masonry/jquery.event-drag
 //= require masonry/jquery.imagesloaded.min
 //= require masonry/jquery.infinitescroll.min
-//= require masonry/modernizr-transitions
 //= require foundation
 //= require_tree .
 
