@@ -2,7 +2,11 @@ class ArticlesController < ApplicationController
 	skip_before_filter :require_login, only: [:index, :show]
 
 	def index
-		@articles = Article.highest_weight
+		if params[:tag]
+  	  	@articles = Article.tagged_with(params[:tag])
+	  else
+	    @articles = Article.highest_weight
+	  end
 	end
 
 	def new
