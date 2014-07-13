@@ -3,7 +3,8 @@
 	<%= form_for(@article) do |f| %>
 		<%= f.text_field :title, placeholder: 'Title', class: 'new-article article-title'  %>
 		<%= f.text_field :tag_list, placeholder: 'Tags', class: 'new-article article-title'  %>
-		<%= f.text_area :body, placeholder: 'Write here..', class: 'new-article article-text-area'  %>
+		<%= f.text_area :body, class: 'tinymce' %>
+		<%= tinymce %>
 		<div class='article-submission-type'><%= f.select :post_status, options_for_select(['save','post']), class: 'submission-type' %></div>
 		<div class='article-post'><%= f.submit 'Submit', class: 'button tiny right post'%></div>         
 	<% end %>

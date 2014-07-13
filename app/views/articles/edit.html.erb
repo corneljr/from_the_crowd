@@ -21,9 +21,10 @@
 	</div>
 		<p class='body'><%= f.text_area :body, :id => "text_area"  %><p>
 	</div>
-
-	<%= f.select :post_status, options_for_select(['save','post']), class: 'submission-type' %>
-	<p class="center"><%= f.submit "Submit", class: 'button tiny right post'  %></p>
+	<div class='article-submission-type'>
+		<%= f.select :post_status, options_for_select(['save','post']), class: 'submission-type' %>
+		<p class="center"><%= f.submit "Submit", class: 'button tiny right post'  %></p>
+	</div>
 
 
 <% end %>

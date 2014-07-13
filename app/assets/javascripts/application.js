@@ -12,12 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require tinymce
 //= require masonry/jquery.masonry
 //= require masonry/jquery.event-drag
 //= require masonry/jquery.imagesloaded.min
 //= require masonry/jquery.infinitescroll.min
 //= require foundation
 //= require_tree .
+
 
 $(function(){ $(document).foundation(); });
 
