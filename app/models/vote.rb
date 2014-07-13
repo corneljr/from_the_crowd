@@ -6,7 +6,6 @@ class Vote < ActiveRecord::Base
 
 
 	def update_weight
-		binding.pry
 		@score = score(article.votes.count, article.vote_average, article.created_at)
 		article.update_columns(weight: @score)
 	end

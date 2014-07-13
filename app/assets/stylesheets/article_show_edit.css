@@ -120,9 +120,22 @@ a.user-name:visited {
 	font-weight: bold;
 }
 
+#vote_quality:focus {
+	outline-width: 0;
+}
+
 .vote-button:hover {
 	background-color: black;
 	color: white;
+}
+
+.disabled:hover {
+	background-color: white;
+	color:grey;
+}
+
+.disabled {
+	border: 1px solid grey;
 }
 
 input[type='range'] {

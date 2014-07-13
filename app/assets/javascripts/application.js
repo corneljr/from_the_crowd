@@ -23,13 +23,13 @@
 $(function(){ $(document).foundation(); });
 
 	$('.chart').easyPieChart({
-				size:140,
+				size:100,
 				animate: 2000,
 				lineCap:'butt',
 				scaleColor: false,
-				barColor: '#2ecc71',
+				barColor: '#000',
 				trackColor: 'transparent',
-				lineWidth: 10
+				lineWidth: 6
 });
 
 

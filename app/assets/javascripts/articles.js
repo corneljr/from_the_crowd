@@ -24,7 +24,8 @@ $container.imagesLoaded(function(){
 });
 
 $(document).ready(function(){
-	
+	var value = $('#vote_quality').val();
+	$('.form-value').html('<p>' + value + '</p>');
 	$('#vote_quality').change( function() {
 		var value = $('#vote_quality').val();
 		$('.form-value').html('<p>' + value + '</p>');

@@ -20,28 +20,25 @@
 
 		<div class="large-2 small-3 columns">
 			<div class='article-info-container'>
-				<h5 class='info-header'>Leagues</h5>
+				<h5 class='info-header'>Tags</h5>
 					<div class='info'></div>
-				<h5 class='info-header'>Players</h5>
+				<h5 class='info-header'>Quality</h5>
 					<div class='info'></div>
-				<h5 class='info-header'>Teams</h5>
-					<div class='info'></div>
-				<h5 class='info-header'>Rating</h5>
-					<div class="vote_gauge">
-	  				<%= form_for [@article, @vote] do |f| %>
-	  					<p class='quality-form'><%= f.range_field :quality, :min=>0, :max=>100, :step=>10 %></p>
-	  					<p class='form-value'></p>
-	  					<% if @voted %>
-	  						<%= f.submit "Vote", disabled: true %>
-	 	  					<div class="text-center">
-	 							 <%= f.submit "Vote", disabled: true, class: "vote-button" %>
-	 					  	</div>
-	  					<% else %>
-	  						<div class="text-center">
-	  							<%= f.submit "Vote", class: "vote-button" %>
-	  					<% end %>
-	  				<% end %>
-	  			</div>
+					 	<span class="chart" data-percent="75"><span class="percent">75%</span></span>
+					 </div>
+
+  				<%= form_for [@article, @vote] do |f| %>
+  					<p class='quality-form'><%= f.range_field :quality, :min=>0, :max=>100, :step=>10 %></p>
+  					<p class='form-value'></p>
+  					<% if @voted %>
+  					<div class='text-center'>
+  						<%= f.submit "Vote", disabled: true, class: 'vote-button disabled' %>
+  					</div>
+  					<% else %>
+  						<div class="text-center">
+  							<%= f.submit "Vote", class: "vote-button" %>
+  					<% end %>
+  				<% end %>
 			</div>
 		</div>
 	</div>
