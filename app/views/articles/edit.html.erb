@@ -19,13 +19,11 @@
   <%= f.label :tag_list, "Tags (separated by commas)" %><br />
   <%= f.text_field :tag_list %>
 	</div>
-
-	
 		<p class='body'><%= f.text_area :body, :id => "text_area"  %><p>
 	</div>
-	
 
-	<p class="center"><%= f.submit "Update Article", class: "submit_btn"  %></p>
+	<%= f.select :post_status, options_for_select(['save','post']), class: 'submission-type' %>
+	<p class="center"><%= f.submit "Submit", class: 'button tiny right post'  %></p>
 
 
 <% end %>

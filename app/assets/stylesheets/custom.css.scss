@@ -255,7 +255,7 @@ a.sign-up {
 	margin-right: auto;
 }
 
-.article-body {
+.article-text-area {
 	resize: none;
 	font-size: 1rem;
 }
@@ -294,3 +294,10 @@ a.save:visited {
 	color: white;
 }
 
+
+.article-submission-type {
+	position: fixed;
+	width: 80px;
+	bottom: 40px;
+	right: 10px;
+}

@@ -3,15 +3,16 @@ class ArticlesController < ApplicationController
 
 	def index
 		@articles = if params[:tag]
-  	  	Article.tagged_with(params[:tag])
+  	  	Article.where(post_status: 'post').tagged_with(params[:tag])
 	  else
-	    	Article.highest_weight
+	    	Article.highest_weight.where(post_status: 'post')
 	  end.order('created_at DESC').page(params[:page])
 
 	  respond_to do |format|
     	format.js # allows the controller to respond to Javascript
     	format.html
   	end
+
 	end
 
 	def new
@@ -56,6 +57,6 @@ class ArticlesController < ApplicationController
 	private
 
 	def article_params
-		params.require(:article).permit(:title, :body, :user_id, :image, :tag_list)
+		params.require(:article).permit(:title, :body, :user_id, :image, :tag_list, :post_status)
 	end
 end
