@@ -12,22 +12,8 @@
 
 
 <div id="articles" class="transitions-enabled container">
-		<% @articles.each do |article|  %>
-				<%= link_to article_path(article) do %>
-					<div class="article-card panel">
-						<h3 class="center a-title"><%= article.title  %></h3>
-						<%= image_tag(article.image.url(:medium)) %>
-						<div class="panel-body">
-							<p><%= article.user.name %></p> 
-					</div>		
-				<% end %>
-				</div>		
-		<% end %>
+	<%= render @articles %>
 </div>
 
+<%= paginate @articles %>
 
-<%= link_to new_article_path do %>
-		<div class="contribute_today" style="background-color: black;">
-				<h2 class="center">Contribute today.</h2>
-		</div>		
-<% end %>	
