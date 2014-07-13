@@ -2,11 +2,17 @@ class ArticlesController < ApplicationController
 	skip_before_filter :require_login, only: [:index, :show]
 
 	def index
-		if params[:tag]
-  	  	@articles = Article.where(post_status: 'post').tagged_with(params[:tag])
+		@articles = if params[:tag]
+  	  	Article.where(post_status: 'post').tagged_with(params[:tag])
 	  else
-	    @articles = Article.highest_weight.where(post_status: 'post')
-	  end
+	    	Article.highest_weight.where(post_status: 'post')
+	  end.order('created_at DESC').page(params[:page])
+
+	  respond_to do |format|
+    	format.js # allows the controller to respond to Javascript
+    	format.html
+  	end
+
 	end
 
 	def new
