@@ -34,6 +34,10 @@ class Article < ActiveRecord::Base
 		self.comment_count = self.comments.count
 	end
 
+	def destroy?
+		self.votes.count > 10 && self.votes.average(:quality).to_i < 40
+	end
+
 	# tagging
   acts_as_taggable
 end

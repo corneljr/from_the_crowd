@@ -19,8 +19,4 @@ class Vote < ActiveRecord::Base
     return (displacement * (quality / 100.0)) + ( epoch_seconds(date) / 45000 )
 	end 
 
-	def destroy?(article)
-		article.votes.count > 10 && article.votes.average(:quality).to_i < 40
-	end
-
 end

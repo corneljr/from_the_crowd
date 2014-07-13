@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+	include ActionController::Live
 
 	before_action :load_article
 

@@ -40,7 +40,10 @@ gem 'aws-sdk', '~> 1.20.0' #amazon storage
 gem 'acts-as-taggable-on'
 gem 'jquery-turbolinks'
 gem 'masonry-rails', '~> 0.2.0'
- gem 'kaminari'
+gem 'tinymce-rails' #text editor
+gem 'kaminari'
+gem 'puma'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -1,0 +1,8 @@
+<% if @article.votes.present? %>
+	<% binding.pry %>
+	<span class="chart" data-percent="<%= @average %>"><span class="percent"><%= @average %>%</span></span>
+<% else %>
+	<p>Be the first to vote!</p>
+<% end %>
+
+						
