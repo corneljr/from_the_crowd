@@ -1,28 +1,5 @@
-== README
+== From The Crowd
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a project hurley87 and I are working on as a side project while at Bitmaker Labs. It is essentially a blogging platform for amateur sports writers. We plan to provide the writers with a wide range of metrics about how other users have recieved their articles and how large of a following they have. Similar to how github provides this information regarding codebases.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+We will be hopefully releasing a beta near the end of July to a collection of writers for testing and validation purposes.
