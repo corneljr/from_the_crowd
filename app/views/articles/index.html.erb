@@ -1,6 +1,7 @@
 
 <div id="index-intro" class="center">
-	<h2><%= link_to "All", articles_path  %>| Most Discussed | Top Rated | Most Recent</h2>
+	<h3><span class="sort-link"><%= link_to "Most Recent", articles_path  %></span> | <span class="sort-link"><a href="#">Top Rated</a></span> | <span class="sort-link"><a href="#">Most Discussed</a></span></h3>
+	<br>
 	<%= link_to "Create Article", new_article_path, class: 'button tiny create-link' %>
 </div>
 
@@ -12,8 +13,9 @@
 
 
 <div id="articles" class="transitions-enabled container">
-	<%= render @articles %>
+	<div id="most-recent"><%= render @recent_articles %></div>
+	<div id='top-rated'><%= render @articles %></div>
+	<div id="most-discussed"><%= render @most_discussed %></div>
 </div>
 
 <%= paginate @articles %>
-

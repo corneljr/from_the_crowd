@@ -2,6 +2,9 @@ require 'acts-as-taggable-on'
 
 class Article < ActiveRecord::Base
 	scope :highest_weight, -> { order('weight DESC')}
+	scope :most_recent, -> { where(post_status: 'post').order("created_at DESC")}
+	scope :discussed, -> { order('comment_count DESC') }
+
 	belongs_to :user
 	has_many :comments
 	has_many :votes
@@ -22,6 +25,13 @@ class Article < ActiveRecord::Base
 
 	def vote_average
 		(self.votes.sum(:quality) / self.votes.count) + (self.votes.count * 0.5)
+	end
+
+	#find number of comments per article so that articles can be sorted by that number
+	before_save :update_comments_count
+
+	def update_comments_count
+		self.comment_count = self.comments.count
 	end
 
 	def destroy?

@@ -23,5 +23,7 @@ $(document).ready(function(){
       }
     });
   }
-	
+  $('#top-rated').fadeOut();
+  $('#most-discussed').fadeOut();
+	 
 });
